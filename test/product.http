@@ -1,0 +1,29 @@
+GET http://localhost:3000/product/
+
+###
+GET http://localhost:3000/product/7
+
+###
+POST http://localhost:3000/product/
+Content-Type: application/json
+
+{
+    "name": "Angular Book",
+    "detail": "Angular developer",
+    "code": "A2020",
+    "price": 250
+}
+
+###
+PUT http://localhost:3000/product/7
+Content-Type: application/json
+
+{
+    "name": "Angular Book",
+    "detail": "Angular developer",
+    "code": "A2020",
+    "price": 250
+}
+
+###
+DELETE http://localhost:3000/product/10
