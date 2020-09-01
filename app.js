@@ -3,6 +3,7 @@ const config = require('dotenv').config()
 const app = express()
 const bodyParser = require('body-parser')
 const port = process.env.PORT || process.env.APP_PORT || 3000
+const cors = require('cors')
 const dbCfg = require('./config/dbConfig')
 
 
@@ -16,7 +17,9 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+app.use(cors())
 app.use('/product',  require('./routes/ProductRouter')())
+app.use('/users',  require('./routes/UserRouter')())
 
 app.listen(port, () => {
   console.log(`Server Listening @ http://localhost:${port}`)

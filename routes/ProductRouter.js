@@ -1,5 +1,4 @@
 const express = require('express')
-
 const mProduct = require('../modules/ProductModule')
 
 module.exports = function () {
