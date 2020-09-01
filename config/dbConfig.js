@@ -20,7 +20,7 @@ module.exports = {
                     console.log('mysql connect falied ', err.errno);
                     return reject(err);
                 }
-                resolve(conn.release());
+                resolve(conn.release()); // release connecting...
             });
         });
     },
