@@ -1,10 +1,8 @@
 const express = require('express')
-const config = require('dotenv').config()
 const app = express()
 const bodyParser = require('body-parser')
 const port = process.env.PORT || process.env.APP_PORT || 3000
 const cors = require('cors')
-const dbCfg = require('./config/dbConfig')
 
 
 app.use( bodyParser.json() );       // to support JSON-encoded body
